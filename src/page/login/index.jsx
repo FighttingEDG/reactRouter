@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { Outlet, useNavigate, useParams } from "react-router-dom";
 const Login = () => {
     const navigate = useNavigate();
     const params = useParams();
@@ -7,6 +7,8 @@ const Login = () => {
         {id}
         登陆
         <button onClick={() => navigate("/article")}>去文章页</button>
+        <br />
+        出口：<Outlet />
     </div>
 }
 export default Login;
