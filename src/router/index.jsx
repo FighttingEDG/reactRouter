@@ -5,7 +5,8 @@ import { createBrowserRouter } from 'react-router-dom'
 
 const router = createBrowserRouter([
     {
-        path: '/login',
+        // param传参需要占位符
+        path: '/login/:id',
         element: <Login />
     },
     {

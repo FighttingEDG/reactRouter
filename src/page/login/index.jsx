@@ -1,9 +1,10 @@
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 const Login = () => {
     const navigate = useNavigate();
-    const [params] = useSearchParams();
+    const params = useParams();
+    let id = params.id;
     return <div>
-        {params.get("name")}
+        {id}
         登陆
         <button onClick={() => navigate("/article")}>去文章页</button>
     </div>
