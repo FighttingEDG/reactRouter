@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 全局定制 */
+        :root:root {
+            --adm-color-primary: #a062d4;
+        }
+
+        /* 局部定制 */
+        .purple-theme {
+            --adm-color-primary: #000;
+        }
+
+        .box {
+            /* 一直向上查找，直到找到 :root */
+            /* 其实就是父元素purple-theme有--adm-color-primary值 */
+            background-color: var(--adm-color-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 全局样式会自动生效 -->
+    <div class="box" style="width: 200px;height: 200px;"></div>
+    <!-- 添加一个使用局部样式的例子 -->
+    <div class="purple-theme">
+        <div class="box" style="width: 200px;height: 200px; margin-top: 20px;"></div>
+    </div>
+</body>
+
+</html>
