@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
+    const navigate = useNavigate();
     return <div>
         登陆
-        <Link to="/article">文章</Link>
+        <button onClick={() => navigate("/article")}>去文章页</button>
     </div>
 }
 export default Login;
