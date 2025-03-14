@@ -5,7 +5,8 @@ const Article = () => {
     const navigate = useNavigate();
     return <div>
         文章组件
-        <button onClick={() => navigate("/login")}>去登陆页</button>
+        {/* searchParams传参 */}
+        <button onClick={() => navigate("/login?name=jevon")}>去登陆页</button>
     </div>
 }
 export default Article;
